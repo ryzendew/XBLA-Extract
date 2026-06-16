@@ -17,24 +17,26 @@ Choose the command for your operating system:
 
 Arch/Artix/CachyOS/EndeavourOS/XeroLinux:
 
-  sudo pacman -S python-pyqt6
+  ```
+sudo pacman -S python-pyqt6
+```
 
 Fedora/Nobara:
-
+```
   sudo dnf install python3-pyqt6 python3-pyqt6-svg
-
+```
 openSUSE (Tumbleweed/Leap):
-
+```
   sudo zypper install python313-PyQt6
-
+```
 PikaOS:
-
+```
   sudo apt install python3-pyqt6.qtsvg
-
+```
 Ubuntu 25.10 (if you encounter GUI issues, also install):
-
+```
   sudo apt install python3-pyqt6
-
+```
 If your distribution is not listed, install PyQt6 via pip:
 
   pip install PyQt6
