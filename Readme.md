@@ -1,4 +1,4 @@
-XBLA Automation
+XBLA Extract
 ===============
 
 A tool for extracting and creating Xbox 360 content. Supports two file formats:
@@ -20,30 +20,41 @@ Installing PyQt6
 
 Choose the command for your operating system:
 
+Windows
+
+head here install python and click add to path : https://www.python.org/downloads/windows/ 
+
+open the powershell/termainal
+
+Type:
+```
+pip install PyQt6
+``` 
+
 Arch/Artix/CachyOS/EndeavourOS/XeroLinux:
-
+```
   sudo pacman -S python-pyqt6
-
+```
 Fedora/Nobara:
-
+```
   sudo dnf install python3-pyqt6 python3-pyqt6-svg
-
+```
 openSUSE (Tumbleweed/Leap):
-
+```
   sudo zypper install python313-PyQt6
-
+```
 PikaOS:
-
+```
   sudo apt install python3-pyqt6.qtsvg
-
+```
 Ubuntu 25.10 (if you encounter GUI issues, also install):
-
+```
   sudo apt install python3-pyqt6
-
+```
 If your distribution is not listed, install PyQt6 via pip:
-
+```
   pip install PyQt6
-
+```
 What this does
 --------------
 
@@ -63,19 +74,20 @@ How to use the graphical version
 2. Navigate to the folder containing these files. For example:
 
    ```
-   cd C:\Users\YourName\Downloads\XBLA-Automation-master
+   cd C:\Users\YourName\Downloads\XBLA-Extract
    ```
 
 3. Run the GUI program:
 
    ```
-   python3 stfs_extract_gui.py
+   start.bat
    ```
+## Linux
 
    On some systems you might need to use `python` instead of `python3`:
 
    ```
-   python stfs_extract_gui.py
+   XBLA.run
    ```
 
 4. A window will appear with two tabs at the top:
