@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+install_pkg() {
+    local cmd="$1"
+    shift
+    pkexec bash -c "$cmd"
+}
+
+if command -v pacman &>/dev/null; then
+    install_pkg "pacman -S --noconfirm python-pyqt6"
+elif command -v dnf &>/dev/null; then
+    install_pkg "dnf install -y python3-pyqt6 python3-pyqt6-svg"
+elif command -v zypper &>/dev/null; then
+    install_pkg "zypper install -y python313-PyQt6"
+elif command -v apt &>/dev/null; then
+    . /etc/os-release 2>/dev/null || true
+    if echo "$ID" "$ID_LIKE" | grep -qi "pika"; then
+        install_pkg "apt install -y python3-pyqt6.qtsvg"
+    else
+        install_pkg "apt install -y python3-pyqt6"
+    fi
+elif command -v pip3 &>/dev/null; then
+    pkexec bash -c "pip3 install PyQt6"
+else
+    echo "Unsupported distribution. Install PyQt6 manually: pip install PyQt6"
+    exit 1
+fi
+
+cd "$SCRIPT_DIR"
+python3 stfs_extract_gui.py
