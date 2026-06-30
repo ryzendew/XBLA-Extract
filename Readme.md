@@ -20,7 +20,7 @@ Installing PyQt6
 
 Choose the command for your operating system:
 
-Windows
+## Windows
 
 head here install python and click add to path : https://www.python.org/downloads/windows/ 
 
@@ -30,6 +30,8 @@ Type:
 ```
 pip install PyQt6
 ``` 
+
+## Linux
 
 Arch/Artix/CachyOS/EndeavourOS/XeroLinux:
 ```
